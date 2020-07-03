@@ -2,50 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Night-Day Button</title>
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <input
-      type="button"
-      value="night"
-      onclick="
-      var target = document.querySelector('body');
-      if(this.value === 'night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value = 'day';
+    <div class="button">
+      <input
+        type="button"
+        value="night"
+        onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          this.value = 'day';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'powderblue';
-          i = i + 1;
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = 'powderblue';
+            i = i + 1;
+          }
+
+        } else {
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          this.value = 'night';
+
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = '#003366';
+            i = i + 1;
+          }
+
         }
-
-      } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value = 'night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = '#003366';
-          i = i + 1;
-        }
-
-      }
-    "
-    />
+      "
+      />
+    </div>
 
     <h1><a href="">JavaScript</a></h1>
-    <a href="">JavaScript (JS)</a> is a lightweight, interpreted, or
-    just-in-time compiled programming language with first-class functions. While
-    it is most well-known as the scripting language for Web pages, many
-    non-browser environments also use it, such as Node.js, Apache CouchDB and
-    Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm,
-    single-threaded, dynamic language, supporting object-oriented, imperative,
-    and declarative (e.g. functional programming) styles. Read more about
-    JavaScript.<br /><br />
+    <div class="content">
+      <a href="">JavaScript (JS)</a> is a lightweight, interpreted, or
+      just-in-time compiled programming language with first-class functions.
+      While it is most well-known as the scripting language for Web pages, many
+      non-browser environments also use it, such as Node.js, Apache CouchDB and
+      Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm,
+      single-threaded, dynamic language, supporting object-oriented, imperative,
+      and declarative (e.g. functional programming) styles. Read more about
+      JavaScript.<br /><br />
+    </div>
   </body>
 </html>
